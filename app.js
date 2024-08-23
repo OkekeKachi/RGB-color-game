@@ -12,8 +12,9 @@ score = document.getElementById("score")
 
 function checkScreenSize() {
     const width = window.innerWidth;
-    const element = document.querySelector('.head');
     const element2 = document.querySelector('.headSmall');
+    const element = document.querySelector('.head');
+    
 
     if (width < 768) {
         element.style.display = 'none';
