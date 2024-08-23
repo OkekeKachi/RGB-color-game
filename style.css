@@ -1,0 +1,106 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+h1{
+    display: inline-block;
+}
+#colorOptions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.color-option {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.color-option.correct {
+    border: 5px solid gold;
+    box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7);
+    transform: scale(1.2);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.btn {
+    padding: 10px;
+    background-color: rgba(0, 191, 255, 0.763);
+    border-radius: 10px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+}
+#newColorsButton{    
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+}
+
+#playToCircles {
+    margin-top: 20px;
+}
+
+#resultMessage {
+    font-size: 20px;
+}
+
+.circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+.circle.filled {
+    background-color: #000;
+}
+
+label {
+    font-size: 20px;
+}
+.hidden {
+    display: none;
+}
+
+#guide {
+    margin-top: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+#guide.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#guide.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.guide-section {
+    margin-bottom: 20px;
+    /* Adds space between sections */
+    padding: 10px;
+    /* Adds padding inside each section */
+    border-bottom: 1px solid #ddd;
+    /* Adds a border at the bottom of each section */
+}

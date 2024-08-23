@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .guide-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>How to Play</h2>
+    <div class="guide-section">
+        <h3>Game Setup</h3>
+        <p>1. Enter a number in the "Play to" field. This number represents how many correct guesses you need to win.
+        </p>
+        <p>2. Click the "Start Game" button to begin. A random color will be displayed at the top.</p>
+    </div>
+    <div class="guide-section">
+        <h3>Playing the Game</h3>
+        <p>1. You will see a set of color boxes. Click on a color that you think matches the displayed RGB color.</p>
+        <p>2. If your guess is correct, one of the circles will be filled, and you will continue guessing until you
+            either fill all the circles or run out of attempts.</p>
+        <p>3. If your guess is incorrect, you will lose one attempt. The game will inform you how many attempts remain.
+        </p>
+    </div>
+    <div class="guide-section">
+        <h3>Winning and Losing</h3>
+        <p>1. If you fill all the circles by guessing the correct colors, you win the game!</p>
+        <p>2. If you run out of attempts before filling all the circles, the game will notify you that you've lost.</p>
+    </div>
+    <div class="guide-section">
+        <h3>New Colors</h3>
+        <p>If you don't like the current set of colors, you can click the "New Colors" button to generate a new set.</p>
+    </div>
+    <div id="guide" class="hidden">
+        <h2>How to Play</h2>
+        <div class="guide-section">
+            <h3>Game Setup</h3>
+            <p>1. Enter a number in the "Play to" field. This number represents how many correct guesses you need to win.
+            </p>
+            <p>2. Click the "Start Game" button to begin. A random color will be displayed at the top.</p>
+        </div>
+        <div class="guide-section">
+            <h3>Playing the Game</h3>
+            <p>1. You will see a set of color boxes. Click on a color that you think matches the displayed RGB color.</p>
+            <p>2. If your guess is correct, one of the circles will be filled, and you will continue guessing until you
+                either fill all the circles or run out of attempts.</p>
+            <p>3. If your guess is incorrect, you will lose one attempt. The game will inform you how many attempts remain.
+            </p>
+        </div>
+        <div class="guide-section">
+            <h3>Winning and Losing</h3>
+            <p>1. If you fill all the circles by guessing the correct colors, you win the game!</p>
+            <p>2. If you run out of attempts before filling all the circles, the game will notify you that you've lost.</p>
+        </div>
+        <div class="guide-section">
+            <h3>New Colors</h3>
+            <p>If you don't like the current set of colors, you can click the "New Colors" button to generate a new set.</p>
+        </div>
+        <button id="closeGuideButton" class="btn">Close Guide</button>
+    </div>
+</body>
+
+</html>
