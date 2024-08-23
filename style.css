@@ -66,10 +66,6 @@ h1{
 label {
     font-size: 20px;
 }
-.hidden {
-    display: none;
-}
-
 #guide {
     margin-top: 30px;
     background-color: #fff;

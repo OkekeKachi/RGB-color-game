@@ -14,18 +14,18 @@ function checkScreenSize() {
     const width = window.innerWidth;
     const element2 = document.querySelector('.headSmall');
     const element = document.querySelector('.head');
-    
+
 
     if (width < 768) {
         element.style.display = 'none';
         element2.style.display = 'block'
-        showGuideButton2.style.display = "inline-block"
-        showGuideButton.style.display = 'none' // Hide on small screens
+        // showGuideButton2.style.display = "inline-block"
+        // showGuideButton.style.display = 'none' // Hide on small screens
     } else {
         element.style.display = 'inline-block';
-        showGuideButton.style.display = 'inline-block' // Show on large screens
+        // showGuideButton.style.display = 'inline-block' // Show on large screens
         element2.style.display = 'none'
-        showGuideButton2.style.display = "none"
+        // showGuideButton2.style.display = "none"
     }
 }
 window.addEventListener('resize', checkScreenSize);
@@ -33,13 +33,46 @@ window.addEventListener('load', checkScreenSize);
 const showGuideButton = document.getElementById('showGuideButton');
 const showGuideButton2 = document.querySelector('.btnSmall');
 const guideElement = document.getElementById('guide');
-const closeGuideButton = document.getElementById('closeGuideButton');
-closeGuideButton.addEventListener('click', () => {
-    guideElement.classList.add('hidden');
-});
 showGuideButton.addEventListener('click', () => {
-    guideElement.classList.toggle('hidden');
+    div = document.createElement("div")
+    div.innerHTML = `
+    <div id="guide">
+        <h2>How to Play</h2>
+        <div class="guide-section">
+            <h3>Game Setup</h3>
+            <p>1. Enter a number in the "Play to" field. This number represents how many correct guesses you need to win.
+            </p>
+            <p>2. Click the "Start Game" button to begin. A random color will be displayed at the top.</p>
+        </div>
+        <div class="guide-section">
+            <h3>Playing the Game</h3>
+            <p>1. You will see a set of color boxes. Click on a color that you think matches the displayed RGB color.</p>
+            <p>2. If your guess is correct, one of the circles will be filled, and you will continue guessing until you
+                either fill all the circles or run out of attempts. You have only 3 attempts.</p>
+            <p>3. If your guess is incorrect, you will lose one attempt.
+            </p>
+        </div>
+        <div class="guide-section">
+            <h3>Winning and Losing</h3>
+            <p>1. If you fill all the circles by guessing the correct colors, you win the game!</p>
+            <p>2. If you run out of attempts before filling all the circles, the game will notify you that you've lost.</p>
+        </div>
+        <div class="guide-section">
+            <h3>New Colors</h3>
+            <p>If you don't like the current set of colors, you can click the "New Colors" button to generate a new set.</p>
+        </div>
+        <button id="closeGuideButton" class="btn">Close Guide</button>   
+    </div> 
+    `
+    document.body.appendChild(div)
+    const closeGuideButton = document.getElementById('closeGuideButton');
+    closeGuideButton.addEventListener('click', () => {
+        div.innerHTML = ` `
+    });
+
 });
+
+
 
 let correctColor;
 let playTo;
