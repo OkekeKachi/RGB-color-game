@@ -14,14 +14,21 @@ function checkScreenSize() {
     const width = window.innerWidth;
     const element2 = document.querySelector('.headSmall');
     const element = document.querySelector('.head');
+    const portfolio2 = document.getElementById('portfolio2')
+    const portfolio1 = document.getElementById('portfolio')
 
 
-    if (width < 768) {
+
+    if (width < 800) {
         element.style.display = 'none';
-        element2.style.display = 'block'
+        element2.style.display = 'block';
+        portfolio1.style.display = 'none';
+        portfolio2.style.display = 'block';
         // showGuideButton2.style.display = "inline-block"
         // showGuideButton.style.display = 'none' // Hide on small screens
     } else {
+        portfolio1.style.display = 'block'
+        portfolio2.style.display = 'none';
         element.style.display = 'inline-block';
         // showGuideButton.style.display = 'inline-block' // Show on large screens
         element2.style.display = 'none'
@@ -33,8 +40,9 @@ window.addEventListener('load', checkScreenSize);
 const showGuideButton = document.getElementById('showGuideButton');
 const showGuideButton2 = document.querySelector('.btnSmall');
 const guideElement = document.getElementById('guide');
+div = document.createElement("div")
 showGuideButton.addEventListener('click', () => {
-    div = document.createElement("div")
+    
     div.innerHTML = `
     <div id="guide">
         <h2>How to Play</h2>
@@ -66,11 +74,27 @@ showGuideButton.addEventListener('click', () => {
     `
     document.body.appendChild(div)
     const closeGuideButton = document.getElementById('closeGuideButton');
+    // setTimeout(() => {
+    //     if (div != ` `) {
+    //         document.addEventListener('click', function (event) {
+
+    //             // Check if the clicked element is outside the div
+    //             if (!div.contains(event.target)) {
+    //                 // Perform an action
+
+    //                 div.innerHTML = ` `
+
+    //             }
+    //         });
+    //     }
+    // }, 2000);
+
     closeGuideButton.addEventListener('click', () => {
         div.innerHTML = ` `
     });
 
 });
+
 
 
 
