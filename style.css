@@ -45,7 +45,14 @@ h1{
 #playToCircles {
     margin-top: 20px;
 }
-
+#playToInput {
+    padding: 15px;
+    font-size: 15px;
+}
+.portfolio{
+    padding: 10px;
+    background-color: rgb(88, 196, 232);
+}
 #resultMessage {
     font-size: 20px;
 }
@@ -70,12 +77,17 @@ label {
 @media (max-width: 767px) {
     #portfolio {
         display: none;
+    }.head{
+        display: none;
     }
 }
 
 /* Hide on screens larger than 992px (desktop) */
 @media (min-width: 992px) {
     #portfolio2 {
+        display: none;
+    }
+    .headSmall {
         display: none;
     }
 }
