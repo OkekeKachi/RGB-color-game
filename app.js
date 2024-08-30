@@ -9,34 +9,6 @@ const startGameButton = document.getElementById('startGameButton');
 const playToCirclesElement = document.getElementById('playToCircles');
 const newColorsButton = document.getElementById('newColorsButton');
 score = document.getElementById("score")
-
-function checkScreenSize() {
-    const width = window.innerWidth;
-    const element2 = document.querySelector('.headSmall');
-    const element = document.querySelector('.head');
-    const portfolio2 = document.getElementById('portfolio2')
-    const portfolio1 = document.getElementById('portfolio')
-
-
-
-    if (width < 800) {
-        element.style.display = 'none';
-        element2.style.display = 'block';
-        portfolio1.style.display = 'none';
-        portfolio2.style.display = 'block';
-        // showGuideButton2.style.display = "inline-block"
-        // showGuideButton.style.display = 'none' // Hide on small screens
-    } else {
-        portfolio1.style.display = 'block'
-        portfolio2.style.display = 'none';
-        element.style.display = 'inline-block';
-        // showGuideButton.style.display = 'inline-block' // Show on large screens
-        element2.style.display = 'none'
-        // showGuideButton2.style.display = "none"
-    }
-}
-window.addEventListener('resize', checkScreenSize);
-window.addEventListener('load', checkScreenSize);
 const showGuideButton = document.getElementById('showGuideButton');
 const showGuideButton2 = document.querySelector('.btnSmall');
 const guideElement = document.getElementById('guide');

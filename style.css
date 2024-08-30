@@ -66,6 +66,19 @@ h1{
 label {
     font-size: 20px;
 }
+/* Hide on screens smaller than 768px (tablet and mobile) */
+@media (max-width: 767px) {
+    #portfolio {
+        display: none;
+    }
+}
+
+/* Hide on screens larger than 992px (desktop) */
+@media (min-width: 992px) {
+    #portfolio2 {
+        display: none;
+    }
+}
 #guide {
     margin-top: 30px;
     background-color: #fff;
